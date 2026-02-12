@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Café Casa Cielo | Premium Menu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div>
+    <h1>Café Casa Cielo</h1>
+    <p>Premium Coffee • Fresh Pastries • Signature Cakes</p>
+  </div>
+</header>
+
+<!-- COFFEE -->
+<section class="section">
+  <h2>☕ Coffee & Specialty Drinks</h2>
+  <div class="menu-grid" id="coffeeContainer"></div>
+</section>
+
+<!-- PASTRIES -->
+<section class="section">
+  <h2>🥐 Fresh Pastries</h2>
+  <div class="menu-grid" id="pastryContainer"></div>
+</section>
+
+<!-- CAKES -->
+<section class="section">
+  <h2>🍰 Signature Cakes</h2>
+  <div class="menu-grid" id="cakeContainer"></div>
+</section>
+
+<!-- CART -->
+<section class="cart-section">
+  <h2>Your Order</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Qty</th>
+        <th>Price</th>
+        <th>Subtotal</th>
+      </tr>
+    </thead>
+    <tbody id="cart"></tbody>
+  </table>
+  <h3>Total: ₱<span id="total">0</span></h3>
+  <h3>Payment Method</h3>
+  <select id="paymentMethod" onchange="togglePayment()">
+    <option value="Cash">Cash</option>
+    <option value="GCash">GCash</option>
+  </select>
+  <div id="cashBox">
+    <input type="number" id="cashAmount" placeholder="Enter cash" oninput="calculateChange()">
+    <p>Change: ₱<span id="change">0</span></p>
+  </div>
+  <div id="gcashBox" style="display:none;">
+    <input type="text" id="gcashNumber" placeholder="Enter 11-digit GCash number">
+  </div>
+  <button onclick="checkout()">Checkout</button>
+</section>
+
+<!-- CONTACT FORM -->
+<section class="contact">
+  <h2>Contact Us</h2>
+  <p>Have a question or want to say hello? We'd love to hear from you ☕</p>
+  <form action="https://formspree.io/f/xojnjwdq" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
