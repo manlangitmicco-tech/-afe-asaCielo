@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Café Casa Cielo | Menu</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="menu-header">
+  <h1>Café Casa Cielo</h1>
+</header>
+
+<section class="section" id="coffee">
+<h2>☕ Coffee</h2>
+<div class="menu-grid" id="coffeeContainer"></div>
+</section>
+
+<section class="section" id="pastries">
+<h2>🥐 Pastries</h2>
+<div class="menu-grid" id="pastryContainer"></div>
+</section>
+
+<section class="section" id="cakes">
+<h2>🍰 Cakes</h2>
+<div class="menu-grid" id="cakeContainer"></div>
+</section>
+
+<section class="cart-section">
+<h2>Your Order</h2>
+
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Qty</th>
+<th>Price</th>
+<th>Subtotal</th>
+</tr>
+</thead>
+<tbody id="cart"></tbody>
+</table>
+
+<h3>Total: ₱<span id="total">0</span></h3>
+
+<select id="paymentMethod">
+<option value="Cash">Cash</option>
+<option value="GCash">GCash</option>
+</select>
+
+<div id="cashSection">
+<input type="number" id="cashAmount" placeholder="Enter cash">
+<p>Change: ₱<span id="changeAmount">0</span></p>
+</div>
+
+<button onclick="checkout()" class="btn">Checkout</button>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
